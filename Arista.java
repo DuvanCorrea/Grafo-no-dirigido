@@ -2,28 +2,28 @@ package trabajoa.p_punto4;
 
 public class Arista {
 
-    private Nodo arista1;
-    private Nodo arista2;
+    private Vertise v1;
+    private Vertise v2;
 
-    public Arista(Nodo arista1, Nodo arista2) {
-        this.arista1 = arista1;
-        this.arista2 = arista2;
+    public Arista(Vertise v1, Vertise v2) {
+        this.v1 = v1;
+        this.v2 = v2;
     }
 
-    public Nodo getArista1() {
-        return arista1;
+    public Vertise getV1() {
+        return v1;
     }
 
-    public void setArista1(Nodo arista1) {
-        this.arista1 = arista1;
+    public void setV1(Vertise v1) {
+        this.v1 = v1;
     }
 
-    public Nodo getArista2() {
-        return arista2;
+    public Vertise getV2() {
+        return v2;
     }
 
-    public void setArista2(Nodo arista2) {
-        this.arista2 = arista2;
+    public void setV2(Vertise v2) {
+        this.v2 = v2;
     }
 
 }
