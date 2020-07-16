@@ -53,11 +53,14 @@ public class GrafoLista {
         Nodo nodo1 = null;
         Nodo nodo2 = null;
         for (Nodo nodo : ver) {
+            System.out.println("Nodo: "+nodo.getDato());
             if (n1 == nodo.getDato()) {
                 nodo1 = nodo;
+                continue;
             }
             if (n2 == nodo.getDato()) {
                 nodo2 = nodo;
+                continue;
             }
         }
         if (nodo1 != null && nodo1 != null) {
@@ -75,14 +78,24 @@ public class GrafoLista {
 
     public ArrayList<Nodo> DFSLista() {
         ArrayList<Nodo> lista = new ArrayList<>();
-
+        for (Nodo nodo : ver) {
+            if (!nodo.isVisitado()) {
+                lista.add(nodo);
+                nodo.setVisitado(true);
+            }
+            DFSListaAux(lista, nodo);
+        }
         return lista;
     }
 
-    public ArrayList<Nodo> DFSListaAux(ArrayList<Nodo> lista) {
-        
-        
+    public ArrayList<Nodo> DFSListaAux(ArrayList<Nodo> lista, Nodo nodo) {
 
+        for (Nodo nodo1 : nodo.getNodosAdyasentes()) {
+            if (!nodo1.isVisitado()) {
+                lista.add(nodo);
+            }
+            nodo1.setVisitado(true);
+        }
         return lista;
     }
 }

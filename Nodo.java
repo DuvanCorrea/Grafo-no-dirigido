@@ -19,12 +19,8 @@ public class Nodo {
         return dato;
     }
 
-    public boolean isVisitado() {
-        return visitado;
-    }
-
-    public void setVisitado(boolean visitado) {
-        this.visitado = visitado;
+    public void setDato(int dato) {
+        this.dato = dato;
     }
 
     public int getGrado() {
@@ -35,10 +31,6 @@ public class Nodo {
         this.grado = grado;
     }
 
-    public void setDato(int dato) {
-        this.dato = dato;
-    }
-
     public ArrayList<Nodo> getNodosAdyasentes() {
         return nodosAdyasentes;
     }
@@ -47,4 +39,12 @@ public class Nodo {
         this.nodosAdyasentes = nodosAdyasentes;
     }
 
+    public boolean isVisitado() {
+        return visitado;
+    }
+
+    public void setVisitado(boolean visitado) {
+        this.visitado = visitado;
+    }
+    
 }
